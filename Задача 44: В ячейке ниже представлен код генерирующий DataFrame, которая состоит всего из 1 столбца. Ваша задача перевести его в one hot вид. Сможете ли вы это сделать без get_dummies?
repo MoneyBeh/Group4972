@@ -1,0 +1,13 @@
+import random
+lst = ['robot'] * 10
+lst += ['human'] * 10
+random.shuffle(lst)
+data = pd.DataFrame({'whoAmI':lst})
+data.head()
+data.whoAmI.value_counts()
+data.whoAmI.value_counts().plot(kind='bar')
+data.whoAmI.value_counts().plot(kind='pie')
+data.whoAmI.value_counts().plot(kind='pie', subplots=True, figsize=(8,8))
+data.whoAmI.value_counts().plot(kind='pie', subplots=True, figsize=(8,8), legend=False)
+data.whoAmI.value_counts().plot(kind='pie', subplots=True, figsize=(8,8), legend=False, explode=[0.1, 0.1])
+data
